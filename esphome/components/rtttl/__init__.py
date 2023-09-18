@@ -42,7 +42,7 @@ def validate_parent_output_config(value):
     PWM_GOOD = ["esp8266_pwm", "ledc"]
     PWM_BAD = [
         "ac_dimmer ",
-        "esp32_dac",
+        # "esp32_dac",
         "slow_pwm",
         "mcp4725",
         "pca9685",
