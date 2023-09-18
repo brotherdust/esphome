@@ -22,7 +22,7 @@ void ESP32DAC::setup() {
   this->turn_off();
 
 #ifdef USE_ESP_IDF
-  auto channel = pin_->get_pin() == 25 ? DAC_CHANNEL_1 : DAC_CHANNEL_2;
+  auto channel = pin_->get_pin() == ( 25 || 17 ) ? DAC_CHANNEL_1 : DAC_CHANNEL_2;
   dac_output_enable(channel);
 #endif
 }
