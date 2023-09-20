@@ -40,7 +40,7 @@ void ESP32DAC::write_state(float state) {
   state = state * 255;
 
 #ifdef USE_ESP_IDF
-  auto channel = pin_->get_pin() == 25 ? DAC_CHANNEL_1 : DAC_CHANNEL_2;
+  auto channel = pin_->get_pin() == ( 25 || 17 ) ? DAC_CHANNEL_1 : DAC_CHANNEL_2;
   dac_output_voltage(channel, (uint8_t) state);
 #endif
 #ifdef USE_ARDUINO
